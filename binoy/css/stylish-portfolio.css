@@ -59,6 +59,16 @@ h6 {
 .map iframe {
   pointer-events: none;
 }
+#mesa-video{
+  background-color: black;
+}
+#mesa-video iframe{
+  height: 75vh;
+  display:block;
+  align: center;
+  margin: 0 auto;
+  background-color: black;
+}
 
 .scroll-to-top {
   position: fixed;
@@ -259,6 +269,7 @@ h6 {
   opacity: 0.5;
   z-index: 1;
 }
+
 .callout h2 {
   position: center;
   text-align: center;
