@@ -102,8 +102,12 @@ h6 {
 
 .masthead h1 {
   font-size: 4rem;
+  color: #ffffff;
   margin: 0;
   padding: 0;
+}
+.masthead h2{
+  color: #e41b1b;
 }
 
 @media (min-width: 992px) {
