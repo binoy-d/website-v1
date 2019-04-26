@@ -270,6 +270,30 @@ h6 {
   transform: translateX(-50%) translateY(-50%);
 }
 
+.more-buttons ul{
+  position: center;
+  text-align: center;
+  display: block;
+  max-width: 100%;
+}
+.more-buttons li{
+  position: center;
+  text-align: center;
+  display: block;
+  max-width: 100%;
+}
+.more-buttons .list-inline-item{
+  position: center;
+  text-align: center;
+  display: block;
+  max-width: 100%;
+}
+.more-buttons .list-inline{
+  position: center;
+  text-align: center;
+  display: block;
+  max-width: 100%;
+}
 .callout .container {
   position: relative;
   padding-top:200px;
@@ -296,7 +320,15 @@ h6 {
   display: block;
   max-width: 30rem;
 }
-
+.more-buttons h1{
+  position: center;
+  text-align: center;
+  color: #840000;
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: block;
+  max-width: 30rem;
+}
 .portfolio-item {
   display: block;
   position: relative;
