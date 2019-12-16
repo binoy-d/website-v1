@@ -20,15 +20,19 @@ function setup(){
         for(var y = 0;y<img.height;y+=step){
             var pix = img.get(x,y)
             var avgcolor = (pix[0]+pix[1]+pix[2])/3
-            if(avgcolor<255 ){
-                bubbles.push(new Bubble(x,y,(255-avgcolor)/(step/(img.width/300)), Math.random()-0.5, Math.random()-0.5, x, y));
+
+            if(avgcolor<200 ){
+                
+                bubbles.push(new Bubble(x,y,(255-avgcolor).map(0,255,0,step*1.7), Math.random()-0.5, Math.random()-0.5, x, y));
             }
         }
     }
     canv = createGraphics(img.width*2,img.height*2);
-    createCanvas(400,400)
+    createCanvas(800,800)
 }
-
+Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+    return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  }
 
 function downloadCanv(){
     saveCanvas(canv, "bubblify_image.jpg")
@@ -62,10 +66,10 @@ function render(){
     canv.noStroke();
     
     for(var i = 0;i<bubbles.length; i++){
-        canv.fill(0,0,0,bubbles[i].intendedsize*3);
+        canv.fill(0,0,0,bubbles[i].intendedsize*7);
         canv.ellipse(bubbles[i].x*2,bubbles[i].y*2, bubbles[i].size*2, bubbles[i].size*2);
     }
-    image(canv, 0,0,400,400)
+    image(canv, 0,0,800,800)
 }
 
 function mousePressed(){
