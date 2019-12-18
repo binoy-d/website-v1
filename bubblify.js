@@ -28,7 +28,7 @@ function setup(){
         }
     }
     canv = createGraphics(img.width*2,img.height*2);
-    createCanvas(800,800)
+    createCanvas(1200,1200)
 }
 Number.prototype.map = function (in_min, in_max, out_min, out_max) {
     return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -69,7 +69,7 @@ function render(){
         canv.fill(0,0,0,bubbles[i].intendedsize*7);
         canv.ellipse(bubbles[i].x*2,bubbles[i].y*2, bubbles[i].size*2, bubbles[i].size*2);
     }
-    image(canv, 0,0,800,800)
+    image(canv, 0,0,1200,1200)
 }
 
 function mousePressed(){
