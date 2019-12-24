@@ -1,5 +1,5 @@
 var bubbles = []
-
+let capture
 let img
 function preload(){
     var link = prompt("input imgur link(images shouldnt be too large)","https://i.imgur.com/qLXLgxE.jpg" )
@@ -15,6 +15,7 @@ var button
 function setup(){   
     image(img,0,0,width,height)
     img.loadPixels()
+
     var step = img.width/75
     for(var x = 0;x<img.width;x+=step){
         for(var y = 0;y<img.height;y+=step){
@@ -23,7 +24,7 @@ function setup(){
 
             if(avgcolor<200 ){
                 
-                bubbles.push(new Bubble(x,y,(255-avgcolor).map(0,255,0,step*1.7), Math.random()-0.5, Math.random()-0.5, x, y));
+                bubbles.push(new Bubble(x,y,(230-avgcolor).map(0,255,0,step*1.7), Math.random()-0.5, Math.random()-0.5, x, y));
             }
         }
     }
