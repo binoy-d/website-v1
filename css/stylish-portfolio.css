@@ -136,6 +136,32 @@ h6 {
   color: #e41b1b;
 }
 
+#about{
+  color:#ffffff;
+  background: url("../img/ucibanner.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: lightpink;
+}
+
+/* mouse over link */
+a:hover {
+  color: lightgray;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
