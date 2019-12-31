@@ -136,7 +136,7 @@ h6 {
   color: #e41b1b;
 }
 
-#about{
+#about-me-lol{
   color:#ffffff;
   background: url("../img/ucibanner.png");
   background-position: center center;
@@ -145,7 +145,7 @@ h6 {
 }
 /* unvisited link */
 a:link {
-  color: white;
+  color: violet;
 }
 
 /* visited link */
