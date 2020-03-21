@@ -146,9 +146,17 @@ h6 {
 }
 
 
-#about{
+#about-me{
   color:#ffffff;
   background: url("../img/ucibanner.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#about{
+  color: #840000;
+  font-weight: 90;
+  background-color: #840000;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
