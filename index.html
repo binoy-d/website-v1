@@ -22,8 +22,10 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
-  <!-- Custom CSS -->
+  <!-- Base CSS -->
   <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/styles.css" rel="stylesheet">
 
 </head>
 
@@ -107,42 +109,64 @@
         <h2 class="mb-5">What I Do</h2>
       </div>
       <div class="row">
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <span class="service-icon rounded-circle mx-auto mb-3">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0" >
+          <button class="service-icon rounded-circle mx-auto mb-3 skills-icon" data-toggle="collapse" data-target="#image-editing-expanded" role='button' aria-expanded="false" aria-controls="image-editing-expanded">
             <i class="icon-picture"></i>
-          </span>
+          </button>
           <h4>
             <strong>Image Editing</strong>
           </h4>
           <p class="text-faded mb-0">Photoshop, Pixlr, Illustrator, GIMP</p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <span class="service-icon rounded-circle mx-auto mb-3">
+          <button class="service-icon rounded-circle mx-auto mb-3 skills-icon" data-toggle="collapse" data-target="#video-editing-expanded" role='button' aria-expanded="false" aria-controls="video-editing-expanded">
             <i class="icon-camrecorder"></i>
-          </span>
+          </button>
           <h4>
             <strong>Video Editing</strong>
           </h4>
           <p class="text-faded mb-0">Premiere, After Effects, Hitfilm, Final Cut Pro</p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-          <span class="service-icon rounded-circle mx-auto mb-3">
+          <button class="service-icon rounded-circle mx-auto mb-3 skills-icon" data-toggle="collapse" data-target="#coding-expanded" role='button' aria-expanded="false" aria-controls="coding-expanded">
             <i class="icon-arrow-right"></i>
-          </span>
+          </button>
           <h4>
             <strong>Coding</strong>
           </h4>
           <p class="text-faded mb-0">Python, Java, JavaScript, C#</p>
         </div>
         <div class="col-lg-3 col-md-6">
-          <span class="service-icon rounded-circle mx-auto mb-3">
+          <button class="service-icon rounded-circle mx-auto mb-3 skills-icon" data-toggle="collapse" data-target="#soft-skills-expanded" role='button' aria-expanded="false" aria-controls="soft-skills-expanded">
             <i class="icon-speech"></i>
-          </span>
+          </button>
           <h4>
             <strong>Soft Skills</strong>
           </h4>
           <p class="text-faded mb-0">Leadership, Public Speaking, Networking</p>
         </div>
+      </div>
+    </div>
+    <!--a bunch of hidden expanded descriptions of my skills-->
+    <div class="collapse" id="image-editing-expanded">
+      <div class="card card-body expanded-skills-description">
+        Adobe Photoshop, Adobe Illustrator, Adobe Lightroom, Pixlr, GIMP, Google Drawings
+      </div>
+    </div>
+    <div class="collapse" id="video-editing-expanded">
+      <div class="card card-body expanded-skills-description">
+        Adobe Premiere Pro, Adobe After Effects, Final Cut Pro, iMovie, Hitfilm, Adobe Animate, <a href="https://www.youtube.com/channel/UCGSjinnFzE3SxUkCZztAuAA">YouTube</a>
+      </div>
+    </div>
+    <div class="collapse" id="coding-expanded">
+      <div class="card card-body expanded-skills-description">
+        <div>Proficent in Python, Java, HTML, CSS, JavaScript, Git, Github, VSCode, Eclipse, ProcessingJS(p5.js) </div>
+        <div>Familar with C#, R, Bootstrap, Cisco IOS, Unity3D, Arduino C, SQL, Agile</div>
+      </div>
+    </div>
+    <div class="collapse" id="soft-skills-expanded">
+      <div class="card card-body expanded-skills-description">
+        Leadership, Teamwork, Communication, Critical Thinking, Quick Learner, Public Speaking
       </div>
     </div>
   </section>
