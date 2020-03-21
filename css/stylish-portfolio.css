@@ -56,6 +56,10 @@ h6 {
   }
 }
 
+.skills-icon {
+  outline:none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 .map iframe {
   pointer-events: none;
 }
@@ -135,6 +139,12 @@ h6 {
 .masthead h3{
   color: #e41b1b;
 }
+.expanded-skills-description{
+  background-color: #840000;
+  border: none;
+  font-size: larger;
+}
+
 
 #about{
   color:#ffffff;
