@@ -143,8 +143,14 @@ h6 {
   background-color: #840000;
   border: none;
   font-size: larger;
+  
 }
-
+.skill-list{
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  font-size: smaller;
+}
 
 #about-me{
   color:#ffffff;
