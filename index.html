@@ -9,8 +9,8 @@
   <meta name="author" content="Daniel Binoy">
   <meta property="og:image" content="/img/banner.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://binoy.co/index.html" />
-  <meta property="og:title" content="Daniel Binoy // Personal Portfolio" />
+  <meta property="og:url" content="https://binoy.co/index.html" />
+  <meta property="og:title" content="Daniel Binoy" />
   <meta property="og:description" content="Daniel Binoy's personal website showcasing his work, as well as ways to contact him." />
   <title>Daniel Binoy</title>
 
@@ -26,10 +26,10 @@
   <link href="css/stylish-portfolio.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link href="css/glitch.css" rel="stylesheet">
-
+  <script src="js/main-landing.js"></script>
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="typeWriter()">
 
   <!-- Navigation -->
   <a class="menu-toggle rounded" href="#about-me">
@@ -65,9 +65,9 @@
   <header class="masthead d-flex">
     
       <div class="container text-center my-auto" >
-        <h1 class="mb-1" >Daniel Binoy</h1>
+        <h1 class="mb-1" id="title-name" ></h1>
         <h3 class="mb-5" id="main-subtitle">
-          <em>Student, Innovator, Creator</em>
+          <em></em>
         </h3>
       </div>
     
@@ -371,6 +371,8 @@
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
 
+  <!-- Binoy's scripts for this template -->
+  
 </body>
 
 </html>
