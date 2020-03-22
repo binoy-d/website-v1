@@ -4,7 +4,7 @@ var speed = 100; /* The speed/duration of the effect in milliseconds */
 
 
 var j = 0;
-var tagline = "Student, Innovator, Creator";
+var tagline = "student developer";
 
 function typeWriter() {
   if (i < name.length) {
@@ -14,6 +14,6 @@ function typeWriter() {
   }else if(j<tagline.length){
     document.getElementById("main-subtitle").innerHTML += tagline.charAt(j);
     j++;
-    setTimeout(typeWriter, speed);
+    setTimeout(typeWriter, speed/2);
   }
 }
