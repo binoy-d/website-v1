@@ -50,3 +50,27 @@
     /*box-shadow: 25px 25px 25px rgba(46, 46, 49, 0.8);*/
   }
   
+  #bigger-box:before,
+  #bigger-box:after {
+    content: "";
+    padding: 0.1em 0.1em;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    top: 50%; 
+    display: block;
+    border: 0.4em solid #840000;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: 8s infinite alternate ease-in-out tipsy;
+  }
+  
+  #bigger-box:before {
+    border-color: #840000 #840000 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  #bigger-box:after {
+    border-color:#840000 #840000 #840000 #840000;
+    /*box-shadow: 25px 25px 25px rgba(46, 46, 49, 0.8);*/
+  }
