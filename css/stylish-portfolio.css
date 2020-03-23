@@ -199,6 +199,10 @@ a:hover {
 a:active {
   color: white;
 }
+
+
+
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
@@ -276,10 +280,13 @@ a:active {
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
-
+#make-title-smaller-lol{
+  width:60%;
+  margin:auto;
+}
 #title-wrapper{
   border:0.5rem solid #840000;
-  width:60%;
+  width:100%;
   margin:auto;
 }
 .menu-toggle {
@@ -602,4 +609,8 @@ a:hover, a:focus, a:active {
     flex: 100%;
     max-width: 100%;
   }
+}
+
+#clickable-title-link{
+  text-decoration: none;
 }
