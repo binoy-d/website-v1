@@ -284,6 +284,10 @@ a:active {
   width:60%;
   margin:auto;
 }
+
+#main-subtitle{
+  font-size:1.5rem;
+}
 #title-wrapper{
   border:0.5rem solid #840000;
   width:100%;
