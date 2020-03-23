@@ -32,6 +32,11 @@ body {
   text-transform: uppercase;
 }
 
+#background-video-blurred{
+  filter:blur(10px);
+}
+
+
 h1,
 h2,
 h3,
