@@ -24,14 +24,14 @@ function setup(){
     img.loadPixels();
     canvw = document.getElementById("ogimg").offsetWidth;
     canvh = document.getElementById("ogimg").offsetHeight;
-    var step = img.width/75
+    var step = img.width/80;
     for(var x = 0;x<img.width;x+=step){
         for(var y = 0;y<img.height;y+=step){
             var pix = img.get(x,y)
             var avgcolor = (pix[0]+pix[1]+pix[2])/3
 
             if(avgcolor<200 ){
-                bubbles.push(new Bubble(x,y,(230-avgcolor).map(0,255,0,canvw/14), Math.random()-0.5, Math.random()-0.5, x, y));
+                bubbles.push(new Bubble(x,y,(255-avgcolor).map(0,255,0,canvw/20), Math.random()-0.5, Math.random()-0.5, x, y));
             }
         }
     }
