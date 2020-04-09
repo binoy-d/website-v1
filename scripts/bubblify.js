@@ -4,18 +4,20 @@ let img
 function preload(){
     var link = prompt("input imgur link(images shouldnt be too large)","https://i.imgur.com/qLXLgxE.jpg" )
     img = loadImage(link)
+    document.getElementById("ogimg").src = link;
 }
 
 var b = 20
-var velb = 1
-let canv
-
-var button 
+let canv;
+var canvw;
+var canvh;
+var button ;
 
 function setup(){   
-    image(img,0,0,width,height)
-    img.loadPixels()
-
+    image(img,0,0,width,height);
+    img.loadPixels();
+    canvw = document.getElementById("ogimg").offsetWidth;
+    canvh = document.getElementById("ogimg").offsetHeight;
     var step = img.width/75
     for(var x = 0;x<img.width;x+=step){
         for(var y = 0;y<img.height;y+=step){
@@ -23,25 +25,36 @@ function setup(){
             var avgcolor = (pix[0]+pix[1]+pix[2])/3
 
             if(avgcolor<200 ){
-                
-                bubbles.push(new Bubble(x,y,(230-avgcolor).map(0,255,0,step*1.7), Math.random()-0.5, Math.random()-0.5, x, y));
+                bubbles.push(new Bubble(x,y,(230-avgcolor).map(0,255,0,canvw/14), Math.random()-0.5, Math.random()-0.5, x, y));
             }
         }
     }
-    canv = createGraphics(img.width*2,img.height*2);
-    createCanvas(1200,1200)
+    console.log(document.getElementById("img-div").offsetWidth);
+    
+    console.log("w:"+canvw+" h:"+canvh);
+    canv= createCanvas(canvw,canvh);
+    canv.parent('sketch-holder');
+    var w = document.getElementById("sketch-holder").style.width;
+    
 }
+
 Number.prototype.map = function (in_min, in_max, out_min, out_max) {
     return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
   }
 
+function windowResized(){
+    canvw = document.getElementById("ogimg").offsetWidth;
+    canvh = document.getElementById("ogimg").offsetHeight;
+    console.log("w:"+canvw+" h:"+canvh);
+    resizeCanvas(canvw, canvh);
+}
 function downloadCanv(){
     saveCanvas(canv, "bubblify_image.jpg")
 }
 
 function draw(){
-    render()
-    tick()
+    render();
+    tick();
 }
 
 function tick(){
@@ -62,15 +75,13 @@ function tick(){
 function render(){
 
     
-    canv.background(255);
-    
-    canv.noStroke();
-    
+    background(255);
+    fill(0);
+    noStroke();
     for(var i = 0;i<bubbles.length; i++){
-        canv.fill(0,0,0,bubbles[i].intendedsize*7);
-        canv.ellipse(bubbles[i].x*2,bubbles[i].y*2, bubbles[i].size*2, bubbles[i].size*2);
+        fill(0,0,0,bubbles[i].intendedsize*5);
+        ellipse(bubbles[i].x.map(0,img.width, 0,canvw),bubbles[i].y.map(0,img.height, 0, canvh), bubbles[i].size/2, bubbles[i].size/2);
     }
-    image(canv, 0,0,1200,1200)
 }
 
 function mousePressed(){
