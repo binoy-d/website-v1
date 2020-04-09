@@ -2,8 +2,14 @@ var bubbles = []
 let capture
 let img
 function preload(){
-    var link = prompt("input imgur link(images shouldnt be too large)","https://i.imgur.com/qLXLgxE.jpg" )
-    img = loadImage(link)
+    var link = prompt("input imgur link(images shouldnt be too large)","https://media4.s-nbcnews.com/j/newscms/2019_23/2885811/190606-border-collie-mc-1318_5b1706791f4ae9ddb3029540a98f7e08.fit-2000w.JPG" )
+    img = loadImage(link, ()=>{
+        console.log("got image");
+    }, ()=>{
+        console.log("oof");
+        document.getElementById("downloadButton").innerHTML = "Error, image may be too large";
+    }
+    );
     document.getElementById("ogimg").src = link;
 }
 
@@ -45,6 +51,9 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 function windowResized(){
     canvw = document.getElementById("ogimg").offsetWidth;
     canvh = document.getElementById("ogimg").offsetHeight;
+    for(var i = 0;i<bubbles.length;i++){
+        bubbles[i].intendedsize = canvw/30;
+    }
     console.log("w:"+canvw+" h:"+canvh);
     resizeCanvas(canvw, canvh);
 }
