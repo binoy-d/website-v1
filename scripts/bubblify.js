@@ -2,7 +2,7 @@ var bubbles = []
 let capture
 let img
 function preload(){
-    var link = prompt("input image link(images shouldnt be too large)","https://media4.s-nbcnews.com/j/newscms/2019_23/2885811/190606-border-collie-mc-1318_5b1706791f4ae9ddb3029540a98f7e08.fit-2000w.JPG" )
+    var link = prompt("input image link(images shouldnt be too large)","https://upload.wikimedia.org/wikipedia/commons/d/d1/Portrait_Gandhi.jpg" )
     img = loadImage(link, ()=>{
         console.log("got image");
     }, ()=>{
@@ -89,7 +89,7 @@ function render(){
     noStroke();
     for(var i = 0;i<bubbles.length; i++){
         canvw = document.getElementById("ogimg").offsetWidth;
-        fill(0,0,0,bubbles[i].size.map(0,canvw/8, 0, 255));
+        fill(0,0,0,bubbles[i].size.map(0,canvw/17, 0, 255));
         ellipse(bubbles[i].x.map(0,img.width, 0,canvw),bubbles[i].y.map(0,img.height, 0, canvh), bubbles[i].size/2, bubbles[i].size/2);
     }
 }
