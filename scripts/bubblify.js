@@ -94,10 +94,6 @@ function render(){
     }
 }
 
-function mousePressed(){
-    bubbles.push(new Bubble(mouseX,mouseY, Math.random()*50, Math.random()-0.5, Math.random()-0.5, mouseX, mouseY));
-}
-
 function Bubble(x, y, size, xdir, ydir, ogx, ogy){
     this.growing = true
     this.x = x;
