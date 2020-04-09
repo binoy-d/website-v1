@@ -2,7 +2,7 @@ var bubbles = []
 let capture
 let img
 function preload(){
-    var link = prompt("input imgur link(images shouldnt be too large)","https://media4.s-nbcnews.com/j/newscms/2019_23/2885811/190606-border-collie-mc-1318_5b1706791f4ae9ddb3029540a98f7e08.fit-2000w.JPG" )
+    var link = prompt("input image link(images shouldnt be too large)","https://media4.s-nbcnews.com/j/newscms/2019_23/2885811/190606-border-collie-mc-1318_5b1706791f4ae9ddb3029540a98f7e08.fit-2000w.JPG" )
     img = loadImage(link, ()=>{
         console.log("got image");
     }, ()=>{
