@@ -51,6 +51,7 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 function windowResized(){
     canvw = document.getElementById("ogimg").offsetWidth;
     canvh = document.getElementById("ogimg").offsetHeight;
+
     for(var i = 0;i<bubbles.length;i++){
         bubbles[i].intendedsize = canvw/30;
     }
@@ -70,12 +71,11 @@ function tick(){
     for(var i = 0;i<bubbles.length;i++){
         if(bubbles[i].size<bubbles[i].intendedsize){
             bubbles[i].size+=0.5;
+            shakeamount = (1 - bubbles[i].size/bubbles[i].intendedsize)*4
+            bubbles[i].x+=(Math.random()*shakeamount-shakeamount/2);
+            bubbles[i].y+=(Math.random()*shakeamount-shakeamount/2);
         }
-        shakeamount = (1 - bubbles[i].size/bubbles[i].intendedsize)*4
-
-
-        bubbles[i].x+=(Math.random()*shakeamount-shakeamount/2);
-        bubbles[i].y+=(Math.random()*shakeamount-shakeamount/2);
+        
     }
     //print(b)
 }
@@ -88,7 +88,8 @@ function render(){
     fill(0);
     noStroke();
     for(var i = 0;i<bubbles.length; i++){
-        fill(0,0,0,bubbles[i].intendedsize*5);
+        canvw = document.getElementById("ogimg").offsetWidth;
+        fill(0,0,0,bubbles[i].size.map(10,canvw, 80, 255));
         ellipse(bubbles[i].x.map(0,img.width, 0,canvw),bubbles[i].y.map(0,img.height, 0, canvh), bubbles[i].size/2, bubbles[i].size/2);
     }
 }
