@@ -1,9 +1,0 @@
-
-//darker red
-#840000
-
-//lighter red
-#e41b1b
-
-//dark blue
-#08172a
