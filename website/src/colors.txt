@@ -1,0 +1,22 @@
+//from https://github.com/jackw01/summer-night-colors
+
+
+mono-1: #e2e8f5
+mono-2: #c4c9d6
+mono-3: #a6abb8
+mono-4: #898e9a
+mono-5: #6d727e
+mono-6: #525762
+mono-7: #393e48
+mono-8: #21262f
+
+
+
+pink: #fa5f8b
+salmon: #f06c6f
+orange: #e17954
+brown-yellow: #d08447
+yellow: #d3ab58
+light-blue: #00ab9a
+blue: #00a9b9
+darker-blue: #00a3d2

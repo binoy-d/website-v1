@@ -1,0 +1,20 @@
+
+.navbar-light .navbar-nav .nav-link{
+    color:#e17954;
+}
+
+.bg-dark {
+    background-color:transparent!important;
+}
+
+.navbar-light .navbar-brand {
+    color: #e17954;
+}
+
+body{
+    background-color: #393e48;
+}
+
+.btn-outline-light{
+    border-color: #e17954;
+}
