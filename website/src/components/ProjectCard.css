@@ -57,7 +57,8 @@
 
 .project-image img{
     /*position: relative;*/
-    
+    border: 1px solid #c41e3d;
+    max-width: 30em;
     filter: url(filters.svg#grayscale);
     /* Firefox 3.5+ */
     filter: gray;
