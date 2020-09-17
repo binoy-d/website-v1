@@ -9,27 +9,49 @@ import ProjectImg from "../img/project.jpg"
 
 
 function Projects() {
+  const projects = [
+    {
+      title: 'Personal Website',
+      description: ['this is a very cool project I made', 'I sure loved making this project', '10/10 would make again'],
+      languages: ['HTML', 'CSS', 'React', 'JavaScript'],
+      link: "https://binoy.co",
+      img: ProjectImg
+    },
+    {
+      title: 'Bubblify',
+      description: ['this is a very cool project I made', 'I sure loved making this project', '10/10 would make again'],
+      languages: ['HTML', 'CSS', 'React', 'JavaScript'],
+      link: "https://binoy.co",
+      img: ProjectImg
+    },
+    {
+      title: 'Puzzle Game',
+      description: ['this is a very cool project I made', 'I sure loved making this project', '10/10 would make again'],
+      languages: ['HTML', 'CSS', 'React', 'JavaScript'],
+      link: "https://binoy.co",
+      img: ProjectImg
+    },
+    {
+      title: 'Bubbles, Together',
+      description: ['this is a very cool project I made', 'I sure loved making this project', '10/10 would make again'],
+      languages: ['HTML', 'CSS', 'React', 'JavaScript'],
+      link: "https://binoy.co",
+      img: ProjectImg
+    }
+  ]
 
   return (
     <>
       <section id="projects" >
-        <Container className="h-100">
-          <Row className = "p-5">
-            <Col lg={12}>
-              <Project title={"Project 1"} image={ProjectImg} summary={"A quick blurb about project 1 lorem ipsuim dolor omg idk what im writing im just tryna fill up space lmao lets see how this goes"}></Project>
-            </Col>
-            <Col lg={12}>
-              <Project title={"Project 2"} image={ProjectImg} summary={"A quick blurb about project 1 lorem ipsuim dolor omg idk what im writing im just tryna fill up space lmao lets see how this goes"}></Project>
-            </Col>
-            <Col lg={12}>
-              <Project title={"Project 3"} image={ProjectImg} summary={"A quick blurb about project 1 lorem ipsuim dolor omg idk what im writing im just tryna fill up space lmao lets see how this goes"}></Project>
-            </Col>
-            <Col lg={12}>
-              <Project title={"Project 4"} image={ProjectImg} summary={"A quick blurb about project 1 lorem ipsuim dolor omg idk what im writing im just tryna fill up space lmao lets see how this goes"}></Project>
-            </Col>
-            <Col lg={12}>
-              <Project title={"Project 5"} image={ProjectImg} summary={"A quick blurb about project 1 lorem ipsuim dolor omg idk what im writing im just tryna fill up space lmao lets see how this goes"}></Project>
-            </Col>
+        <Container className="h-100 w-100">
+          <Row className="p-5">
+            {
+              projects.map((proj, index) => (
+                <Col lg={12}>
+                  <Project proj={proj} side = {index%2}></Project>
+                </Col>
+              ))
+            }
           </Row>
         </Container>
       </section>

@@ -11,10 +11,10 @@ function Header() {
       <Navbar bg="dark" className="main-navbar justify-content-end">
         <div className="container">
           <div className="navbar-nav mr-auto">
-            <Navbar.Brand href="#home">Home</Navbar.Brand>
+            <li><Link activeClass="active" className="btn nav-link header-section-link" to="home" spy={true} smooth={true} duration={600} >Home</Link></li>
           </div>
-          <div className="navbar-nav ml-auto">
-            <ul className = "nav">
+          <div  className="navbar-nav mr-sm-0">
+            <ul className = "nav ">
             <li><Link activeClass="active" className="btn nav-link header-section-link" to="about" spy={true} smooth={true} duration={600} >About</Link></li>
             <li><Link activeClass="active" className="btn nav-link header-section-link" to="projects" spy={true} smooth={true} duration={600}>Projects</Link></li>
             <li><Link activeClass="active" className="btn nav-link header-section-link" to="projects" spy={true} smooth={true} duration={600}>Resume</Link></li>
