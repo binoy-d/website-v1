@@ -1,6 +1,6 @@
 
 .navbar-light .navbar-nav .nav-link{
-    color:#e17954;
+    color:white;
 }
 
 .bg-dark {
@@ -8,13 +8,18 @@
 }
 
 .navbar-light .navbar-brand {
-    color: #e17954;
+    color: white;
 }
 
-body{
-    background-color: #393e48;
-}
 
 .btn-outline-light{
-    border-color: #e17954;
+    border-color: white;
+}
+
+
+.header-section-link{
+    color: white!important;
+}
+.header-section-link:hover{
+    color:#DCDCDC!important;
 }
