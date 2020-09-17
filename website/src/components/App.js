@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from './Header.js'
 import Masthead from './Masthead.js'
 import Projects from './Projects.js'
@@ -7,11 +7,10 @@ import './App.css';
 function App() {
   return (
     <>
-
-      <Header />
-      <Masthead />
-      <About />
-      <Projects />
+        <Header />
+        <Masthead />
+        <About />
+        <Projects />
 
     </>
   );

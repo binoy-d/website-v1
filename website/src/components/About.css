@@ -1,3 +1,7 @@
 #about{
-    background-color: red;
+    background-color: transparent;
+}
+
+.about-description{
+    color:white;
 }

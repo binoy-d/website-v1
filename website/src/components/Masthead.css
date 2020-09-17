@@ -3,7 +3,8 @@
 }
 
 .masthead-name{
-    color:#c41e3d;
+    color:transparent;
+    -webkit-text-stroke: 2px #c41e3d;
 }
 
 
